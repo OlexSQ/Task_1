@@ -30,7 +30,7 @@ print(new_list)
 
 print("The quontity of elenements in my list is %d" % new_list.__len__())
 
-copy_of_new_list = new_list
+copy_of_new_list = list(new_list)          # Fixed
 print(type(copy_of_new_list))
 
 def sortMyList(my_list):
@@ -67,21 +67,23 @@ print("Price of the milk is %f $" % price_list["Milk"])
 price_list.pop("Bread")
 print(price_list)
 
-keys = []
-for key in price_list:
-    keys.append(key)
-print(keys)
+# keys = []
+# for key in price_list:
+#     keys.append(key)
+# print(keys)                     - wrong way
 print(price_list.keys())
 
-values = []
-for key in price_list:
-    values.append(price_list[key])
-print(values)
+# values = []
+# for key in price_list:
+#     values.append(price_list[key])
+# print(values)                   - wrong way
 print(price_list.values())
 
-print(sorted(price_list.keys()))
+sorted_dict_by_kyes = sorted(price_list.keys())  # Fixed
+print(sorted_dict_by_kyes)
 
-print(sorted(price_list.values()))
+sortsd_dict_by_values = sorted(price_list.values())  # Fixed
+print(sortsd_dict_by_values)
 
 
 
