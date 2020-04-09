@@ -84,14 +84,11 @@ def multiple_numbers_and_return_list(number):
     func_list = [number * global_var]
     return func_list, len(func_list)
 
-def print_all_args(*a, **k):
-    print(f"Args = {a}\nKwargs = {k}")
+def print_all_args(*args, **kwargs):           # Changed names of arguments
+    print(f"Args = {args}\nKwargs = {kwargs}")
 
 def is_divisible_by(num, divisor):
-    if num % divisor == 0:
-        return True
-    else:
-        return False
+    return num % divisor == 0                  # Changed func - less code
 
 def fibonacci_numders(quantity):
     if quantity == 1:
@@ -105,5 +102,5 @@ def fibonacci_numders(quantity):
 if __name__ == '__main__':
     print(multiple_numbers_and_return_list(4))
     print_all_args("arg_1", "arg_2", kwarg_1=12, kwarg_2=167, kwarg_3 = 1000)
-    print(is_divisible_by(16, 6))
+    print(is_divisible_by(16, 2))
     print(fibonacci_numders(10))
